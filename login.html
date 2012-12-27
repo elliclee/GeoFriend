@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Neighbor Chat</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <script type="text/javascript" src="jquery/jquery-1.6.1.js"></script>
+        <script src="js/login.js"></script>
+        <script type="text/javascript" src="jquery/jquery.mobile-1.0b1.js"></script>
+        <link rel="stylesheet" href="jquery/jquery.mobile-1.0b1.css"/>
+        <link rel="stylesheet" href="css/login.css"/>
+    </head>
+    <body>
+        <div data-role="page" id="first" data-theme ="c">
+            <div data-role="header">
+                <h5>Friend++</h5>
+            </div>
+            <div data-role="content">
+                <div>
+                    <form action="login.php" method="post" id="login" data-ajax="false">
+                        <div data-role="fieldcontain">
+                            <input  type="email" name="email" id="email"  required="required" placeholder="请输入您的登录邮箱" />
+                            <br/>
+                            <input type="password" name="password" id="password" required="required"  placeholder="请输入您的登录密码"/>
+                            <div id="confirm"></div>
+                            <input type="hidden" name="longitude" id="longitude" value="1" />
+                            <input type="hidden" name="latitude" id="latitude" value="1" />
+                        </div>
+                        <span id="loginLoading"><img src="images/indicator.gif" alt="Login" /></span>
+
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a"><input type="reset" value="重填" /></div>
+                            <div class="ui-block-b"><input id="loginBtn" type="submit" value="登录"/></div>
+                        </div>
+                    </form>
+                </div>
+                <div id="registerLink">
+                    <p style="text-align: center"> <a href="#second">注册Friend++</a></p>
+                </div>
+                <div id="geoResults"></div>
+            </div>
+            <div data-role="footer">
+                <p style="text-align: center;font-size: 12px;" id="locationTip">定位中</p>
+                <p style="text-align: center"> team luff 2011</p>
+            </div>
+        </div>
+        <div data-role="page" id="second" data-theme ="c">
+            <div data-role="header">
+                <h5>注册Friend++</h5>
+            </div>
+            <div data-role="content">
+                <form id="signup_form" action="register.php" method="post" data-ajax="false">
+                    <div data-role="fieldcontain">
+                        <input type="email" name="email_input" id="email_input"  required="required"  placeholder="请输入要注册的邮箱"/>
+                        <div>
+                            <span id="rigisterLoading"><img src="images/indicator.gif" alt="Checking" /></span>
+                            <span id="rigisterResult"></span>
+                        </div>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <input type="password" name="password_input" id="password_input" required="required" placeholder="请输入你的密码"/>
+                        <br>
+                        <input type="password" name="password_confirm" id="password_confirm" required="required" placeholder="请再次输入你的密码"/>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <input type="hidden" name="longitude_register" id="longitude_register" value="0"/>
+                        <input type="hidden" name="latitude_register" id="latitude_register" value="0" />
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><input type="reset" value="重填" /></div>
+                        <div class="ui-block-b"><input id="rigisterBtn" type="submit" value="注册"/></div>
+                    </div><!-- /grid-a -->
+                </form>
+            </div> 
+            <div data-role="footer">
+
+                <p style="text-align: center"> team luff 2011</p>
+            </div>
+        </div>
+    </body>
+</html>

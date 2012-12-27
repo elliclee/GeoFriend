@@ -1,0 +1,47 @@
+<HTML>
+    <HEAD>
+        <TITLE> New Document </TITLE>
+        <META NAME="Generator" CONTENT="EditPlus">
+        <META NAME="Author" CONTENT="">
+        <META NAME="Keywords" CONTENT="">
+        <META NAME="Description" CONTENT="">
+        <script src="../jquery/jquery-1.6.1.min.js" type="text/javascript"></script>
+        <script>
+//            $(document).ready(function (){
+//                /* attach a submit handler to the form */
+//                $("#image_form").submit(function(event) {
+//
+//                    /* stop form from submitting normally */
+//                    event.preventDefault(); 
+//        
+//                    /* get some values from elements on the page: */
+//                    var $form = $( this ),
+//                    term = $form.find( 'input[name="image"]' ).val(),
+//                    url = $form.attr( 'action' );
+//
+//                    /* Send the data using post and put the results in a div */
+//                    $.post( url, $("image_form").serialize(),
+//                    function( data ) {
+//                        var content = $( data ).find( '#content' );
+//                        $( "#result" ).empty().append( content );
+//                    }
+//                );
+//                });
+//
+//            });
+            
+        </script>
+    </HEAD>
+
+    <BODY>
+
+        <form id="image_form" action="image.php" method="post" enctype="multipart/form-data">
+            <label for="image">Filename:</label>
+            <input type="file" name="image" id="image" /> 
+            <br />
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+
+
+    </BODY>
+</HTML>

@@ -1,0 +1,77 @@
+
+ol 
+{
+    list-style:none;
+    width:100%;
+    padding-left: 0;
+}
+ol li {
+    margin-bottom: 25px
+}
+.avatar {
+    float:left;
+    border:1px solid #aaa;
+    padding:1px;
+    width:60px;
+    height:60px;
+    background:#fcfcfc;
+    margin-right:15px;
+}
+.comment-content 
+{
+    background:#fff;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    padding:10px 15px;
+    float:left;
+    margin-top:-2px;
+    width: 55%;
+}
+.even .comment-content 
+{
+    padding-left: 7px;
+}
+.odd .comment-content 
+{
+    padding-right: 7px;
+}
+.odd .avatar, .odd .comment-content 
+{
+    float:right;
+}
+.odd .avatar 
+{
+    margin:0 0 0 15px;
+}
+.even .comment-content:before, .odd .comment-content:after
+/*.odd .avatar:before,.even .avatar:after*/
+{
+    content:"";
+    width:0;
+    height:0;
+    font-size:0;
+    position:relative;
+    border:8px solid transparent;
+    overflow:hidden;
+    top:-2px;
+}
+.even .comment-content:before 
+/*.even .avatar:after*/
+{
+    float:left;
+    border-right-color:#fff;
+    border-left:0;
+    left:-15px;
+    z-index: 10;
+}
+.odd .comment-content:after 
+/*.odd .avatar:before*/
+{
+    float:right;
+    border-left-color:#fff;
+    border-right:0;
+    right:-15px;
+    z-index: 10;
+}
+.clear:after {content:"."; height:0; display:block; visibility:hidden; clear:both;}

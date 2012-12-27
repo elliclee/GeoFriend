@@ -1,0 +1,7 @@
+/*Align center*/
+.bc
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+.tc{text-align: center;}
