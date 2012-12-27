@@ -33,10 +33,10 @@ class sql {
      */
 
     public function __construct() {
-        $this->db_host = "localhost";
+        $this->db_host = "127.0.0.1";
         $this->db_user = "root";
-        $this->db_pwd = "123456";
-        $this->db_database = "starrysky";
+        $this->db_pwd = "";
+        $this->db_database = "geofriend";
         $this->coding = "UTF8";
         $this->connect();
     }
